@@ -22,7 +22,9 @@ app.use(stylus.middleware(
 app.use(express.static(__dirname + '/public'))
 
 app.get('/', function (req, res) {
-  res.end('Hi there!')
+  res.render('index',
+    { title : 'Home' }
+    )
 })
 app.listen(3000)
 
